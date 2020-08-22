@@ -1,0 +1,16 @@
+/Custom3.1/Application/bin
+/Custom3.1/Common/bin
+/Custom3.1/Common/obj
+/Custom3.1/Application/obj
+/Custom3.1/WebApi/obj
+/Custom3.1/WebApi/bin
+/Custom3.1/Repository/bin
+/Custom3.1/Repository/obj
+/Custom3.1/ORM.EntityFrameworkCore/bin
+/Custom3.1/ORM.EntityFrameworkCore/obj
+/Custom3.1/IRepository/bin
+/Custom3.1/IRepository/obj
+/Custom3.1/IApplication/bin
+/Custom3.1/IApplication/obj
+/Custom3.1/Domain/bin
+/Custom3.1/Domain/obj
