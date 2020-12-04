@@ -4,8 +4,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using Autofac;
 using Common.AppSettings;
+using Common.AutoMapperConfig;
 using Common.EntityFrameworkCore;
+using Common.Filter;
 using Common.IOC.AutoFac;
+using Common.LogConfig;
+using IApplication;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -33,7 +37,12 @@ namespace WebApi
             _configuration.GetSection(ConnectionString.ConnectionStr).Bind(ConnectionStr);
 
             services.Configure<AppSetting>(_configuration);
+
+
             services.AddDbContext(ConnectionStr);
+            services.AddControllers(options=> {
+                //options.Filters.Add<CustomExceptionFilter>();
+            });
         }
 
         /// <summary>
@@ -44,25 +53,41 @@ namespace WebApi
         /// <param name="builder"></param>
         public void ConfigureContainer(ContainerBuilder builder)
         {
-            builder.BuilderServiceProvider();
+            //new AutoMapperModule(typeof(AppServiceAutoMapper).Assembly)
+            builder.BuilderServiceProvider(new AutoMapperModule());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
+            //if (env.IsDevelopment())
+            //{
+                //app.UseDeveloperExceptionPage();
+            //}
+            //else
+            //{
+                app.UseExceptionHandler(builder =>
+                {
+                    builder.Use(async (context, next) =>
+                    {
+                        if (!context.Response.HasStarted)
+                        {
+                            context.Response.ContentType = "application/json";
+
+                        }
+                    });
+                });
+            //}
 
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
+                //endpoints.MapGet("/", async context =>
+                //{
+                //    await context.Response.WriteAsync("Hello World!");
+                //});
+                endpoints.MapControllers();
             });
         }
     }

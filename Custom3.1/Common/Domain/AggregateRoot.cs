@@ -4,8 +4,7 @@ using System.Text;
 
 namespace Common.Domain
 {
-    public abstract class AggregateRoot<T>
+    public abstract class AggregateRoot
     {
-        public T Id { get; set; }
     }
 }

@@ -13,7 +13,7 @@ namespace ORM.EntityFrameworkCore.Configuration.Default
         {
             base.Configure(builder);
             builder.Property(x => x.Pwd)
-                .HasColumnType("varchar(20)")
+                .HasColumnType("varchar(64)")
                 .IsRequired();
 
             builder.Property(x => x.UserName)

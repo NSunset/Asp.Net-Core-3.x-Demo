@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Common.IOC;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Data.Common;
@@ -6,7 +7,7 @@ using System.Text;
 
 namespace Common.EntityFrameworkCore
 {
-    public class MySqlDbContextConfiguration : IDbContextConfiguration
+    public class MySqlDbContextConfiguration : IDbContextConfiguration,ITransient
     {
         public void Configure<T>(DbContextOptionsBuilder builder, string connectionString) where T : DbContext
         {
