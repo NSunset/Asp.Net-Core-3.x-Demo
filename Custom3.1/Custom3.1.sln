@@ -3,29 +3,29 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Custom3.1.UserInterface", "Custom3.1.UserInterface", "{B11FC3EE-6C94-4ACC-8037-D73B9696740F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Custom.WebApi", "Custom.WebApi\Custom.WebApi.csproj", "{9C045824-E2DA-48C6-8013-A9BADBD37213}"
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Custom3.1.Infrastructure", "Custom3.1.Infrastructure", "{6609B644-FCED-436D-B2B7-B9812B1E3A78}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{210E7225-20AE-4BB8-A678-B6B595FFA98C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Custom.ORM.EntityFrameworkCore", "Custom.ORM.EntityFrameworkCore\Custom.ORM.EntityFrameworkCore.csproj", "{9A88ACEF-1B39-4D30-B025-828E1D1F087C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ORM.EntityFrameworkCore", "ORM.EntityFrameworkCore\ORM.EntityFrameworkCore.csproj", "{9A88ACEF-1B39-4D30-B025-828E1D1F087C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Custom3.1.Domain", "Custom3.1.Domain", "{111CEEBF-82D2-4D1C-8B7B-9FE4F1BE8680}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Custom.3.1.Domain", "Custom.3.1.Domain", "{111CEEBF-82D2-4D1C-8B7B-9FE4F1BE8680}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Custom.Repository", "Custom.Repository\Custom.Repository.csproj", "{9A08E4EB-A3FB-41B3-9118-135E4DFB5A0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{9A08E4EB-A3FB-41B3-9118-135E4DFB5A0F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Custom.Domain", "Custom.Domain\Custom.Domain.csproj", "{F87B3316-0F8B-46BE-9559-0FE5191AA27B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{F87B3316-0F8B-46BE-9559-0FE5191AA27B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Custom.IRepository", "Custom.IRepository\Custom.IRepository.csproj", "{C599B42D-B391-4690-9D54-98A2D94E2BCB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IRepository", "IRepository\IRepository.csproj", "{C599B42D-B391-4690-9D54-98A2D94E2BCB}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Custom3.1.Application", "Custom3.1.Application", "{F51735E8-1186-4D2C-9883-433D4ABEEF78}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Custom.3.1.Application", "Custom.3.1.Application", "{F51735E8-1186-4D2C-9883-433D4ABEEF78}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Custom.IApplication", "Custom.IApplication\Custom.IApplication.csproj", "{3DD1A8AE-EA06-4EAD-BCC5-E4272D9A90F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IApplication", "IApplication\IApplication.csproj", "{3DD1A8AE-EA06-4EAD-BCC5-E4272D9A90F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Custom.Application", "Custom.Application\Custom.Application.csproj", "{46098DB2-A071-440E-A419-B3229FC2D79F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{46098DB2-A071-440E-A419-B3229FC2D79F}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Custom.3.1.UserInterface", "Custom.3.1.UserInterface", "{B11FC3EE-6C94-4ACC-8037-D73B9696740F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{9C045824-E2DA-48C6-8013-A9BADBD37213}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Custom.lib", "Custom.lib\Custom.lib.csproj", "{52830D11-C7A8-4789-A754-6989E5FD07DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,10 +33,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{210E7225-20AE-4BB8-A678-B6B595FFA98C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{210E7225-20AE-4BB8-A678-B6B595FFA98C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{210E7225-20AE-4BB8-A678-B6B595FFA98C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{210E7225-20AE-4BB8-A678-B6B595FFA98C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9A88ACEF-1B39-4D30-B025-828E1D1F087C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9A88ACEF-1B39-4D30-B025-828E1D1F087C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A88ACEF-1B39-4D30-B025-828E1D1F087C}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -65,12 +61,15 @@ Global
 		{9C045824-E2DA-48C6-8013-A9BADBD37213}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C045824-E2DA-48C6-8013-A9BADBD37213}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C045824-E2DA-48C6-8013-A9BADBD37213}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52830D11-C7A8-4789-A754-6989E5FD07DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52830D11-C7A8-4789-A754-6989E5FD07DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52830D11-C7A8-4789-A754-6989E5FD07DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52830D11-C7A8-4789-A754-6989E5FD07DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{210E7225-20AE-4BB8-A678-B6B595FFA98C} = {6609B644-FCED-436D-B2B7-B9812B1E3A78}
 		{9A88ACEF-1B39-4D30-B025-828E1D1F087C} = {6609B644-FCED-436D-B2B7-B9812B1E3A78}
 		{9A08E4EB-A3FB-41B3-9118-135E4DFB5A0F} = {6609B644-FCED-436D-B2B7-B9812B1E3A78}
 		{F87B3316-0F8B-46BE-9559-0FE5191AA27B} = {111CEEBF-82D2-4D1C-8B7B-9FE4F1BE8680}
@@ -78,6 +77,7 @@ Global
 		{3DD1A8AE-EA06-4EAD-BCC5-E4272D9A90F5} = {F51735E8-1186-4D2C-9883-433D4ABEEF78}
 		{46098DB2-A071-440E-A419-B3229FC2D79F} = {F51735E8-1186-4D2C-9883-433D4ABEEF78}
 		{9C045824-E2DA-48C6-8013-A9BADBD37213} = {B11FC3EE-6C94-4ACC-8037-D73B9696740F}
+		{52830D11-C7A8-4789-A754-6989E5FD07DE} = {6609B644-FCED-436D-B2B7-B9812B1E3A78}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {ECD45439-8431-4AF8-81D4-C5A03F37259A}
