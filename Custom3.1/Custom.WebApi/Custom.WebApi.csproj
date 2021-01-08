@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="logs\**" />
+    <Content Remove="logs\**" />
+    <EmbeddedResource Remove="logs\**" />
+    <None Remove="logs\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Custom.Application\Custom.Application.csproj" />
+    <ProjectReference Include="..\Custom.Domain\Custom.Domain.csproj" />
+    <ProjectReference Include="..\Custom.IApplication\Custom.IApplication.csproj" />
+    <ProjectReference Include="..\Custom.IRepository\Custom.IRepository.csproj" />
+    <ProjectReference Include="..\Custom.lib\Custom.lib.csproj" />
+    <ProjectReference Include="..\Custom.ORM.EntityFrameworkCore\Custom.ORM.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\Custom.Repository\Custom.Repository.csproj" />
+  </ItemGroup>
+
+</Project>

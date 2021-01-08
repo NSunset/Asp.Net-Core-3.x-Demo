@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Custom.lib</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="DynamicProxy\ICustomDynamicProxy.cs" />
+    <Compile Remove="UnitofWork\UnitofWorkIntercept.cs" />
+  </ItemGroup>
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+	<ItemGroup>
+	  <PackageReference Include="Autofac" Version="5.2.0" />
+	  <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="5.0.0" />
+	  <PackageReference Include="Autofac.Extras.DynamicProxy" Version="5.0.0" />
+	  <PackageReference Include="AutoMapper" Version="10.0.0" />
+	  <PackageReference Include="Castle.Core" Version="4.4.1" />
+	  <PackageReference Include="Castle.Core.AsyncInterceptor" Version="1.7.0" />
+	  <PackageReference Include="log4net" Version="2.0.8" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.0" />
+	  <PackageReference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore" Version="3.1.0" />
+	</ItemGroup>
+</Project>
